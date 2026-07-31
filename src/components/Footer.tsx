@@ -1,5 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const GithubIcon = ({ size = 24, className }: { size?: number; className?: string }) => (
   <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -56,7 +57,7 @@ export default function Footer() {
           <span>Code2Commit © {new Date().getFullYear()}</span>
         </div>
         <div className="flex items-center gap-6">
-          <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
+          <Link to="/privacy" className="hover:text-gray-300 transition-colors">Privacy</Link>
           <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
             <GithubIcon size={16} />
