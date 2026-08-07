@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from '../assets/logo/code2commit.png';
 
 const GithubIcon = ({ size = 24, className }: { size?: number; className?: string }) => (
   <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -37,13 +38,16 @@ export default function Footer() {
             <p className="text-gray-400 mb-8 text-lg max-w-md mx-auto">
               Join hundreds of developers who are already tracking their progress effortlessly.
             </p>
-            <motion.button
+            <motion.a
+              href="https://chromewebstore.google.com/detail/code2commit/ehimeboclpaooohhagjlehnjdjccgpid"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.03, boxShadow: '0 0 30px rgba(255,193,7,0.4)' }}
               whileTap={{ scale: 0.97 }}
-              className="px-10 py-4 btn-shimmer text-dark font-bold rounded-xl text-base shadow-lg shadow-primary/20"
+              className="inline-block px-10 py-4 btn-shimmer text-dark font-bold rounded-xl text-base shadow-lg shadow-primary/20 cursor-pointer"
             >
               Get Code2Commit — It's free
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </motion.div>
@@ -51,15 +55,14 @@ export default function Footer() {
       {/* Bottom */}
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-primary to-orange-400 flex items-center justify-center font-bold text-dark text-[8px]">
-            C2C
+          <div className="w-8 h-8 rounded-lg overflow-hidden flex items-center justify-center">
+            <img src={logoImage} alt="Code2Commit Logo" className="w-full h-full object-cover" />
           </div>
           <span>Code2Commit © {new Date().getFullYear()}</span>
         </div>
         <div className="flex items-center gap-6">
           <Link to="/privacy" className="hover:text-gray-300 transition-colors">Privacy</Link>
-          <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
+          <a href="https://github.com/mohitxcodes" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
             <GithubIcon size={16} />
           </a>
         </div>

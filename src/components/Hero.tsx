@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
+import { StepForward } from 'lucide-react';
 
 const GithubIcon = ({ size = 24, className }: { size?: number; className?: string }) => (
   <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -138,27 +139,30 @@ export default function Hero() {
           to your GitHub repo — proper file structure, meaningful commit messages, zero copy-paste.
         </motion.p>
 
-        {/* CTA Buttons */}
         <motion.div
           variants={itemVariants}
           className="flex flex-col sm:flex-row items-center gap-4 mb-16"
         >
-          <motion.button
+          <motion.a
+            href="https://chromewebstore.google.com/detail/code2commit/ehimeboclpaooohhagjlehnjdjccgpid"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
-            className="flex items-center justify-center gap-2.5 px-9 py-4 btn-shimmer text-dark font-bold rounded-xl transition-all text-base"
+            className="flex items-center justify-center gap-2.5 px-9 py-4 btn-shimmer text-dark font-bold rounded-xl transition-all text-base cursor-pointer"
           >
             <ChromeIcon size={20} />
             Add to Chrome
-          </motion.button>
-          <motion.button
+          </motion.a>
+          <motion.a
+            href="#how-it-works"
             whileHover={{ scale: 1.04, borderColor: 'rgba(255,255,255,0.2)' }}
             whileTap={{ scale: 0.97 }}
-            className="flex items-center justify-center gap-2.5 px-9 py-4 glass-card hover:bg-white/10 text-white font-medium rounded-xl transition-all text-base"
+            className="flex items-center justify-center gap-2.5 px-9 py-4 glass-card hover:bg-white/10 text-white font-medium rounded-xl transition-all text-base cursor-pointer"
           >
-            <GithubIcon size={20} />
-            View on GitHub
-          </motion.button>
+            <StepForward size={20} />
+            Get Started
+          </motion.a>
         </motion.div>
 
 

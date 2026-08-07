@@ -64,7 +64,7 @@ export default function HowItWorks() {
   const goPrev = useCallback(() => setActiveStep((prev) => Math.max(prev - 1, 0)), []);
 
   return (
-    <section ref={sectionRef} className="relative px-6 md:px-10 py-24 md:py-16 overflow-hidden">
+    <section id="how-it-works" ref={sectionRef} className="relative px-6 md:px-10 py-24 md:py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Decorative divider */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/5 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />

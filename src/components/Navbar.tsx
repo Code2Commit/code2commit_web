@@ -38,18 +38,23 @@ export default function Navbar() {
         </span>
       </div>
 
-      <div className="flex items-center gap-3">
-        <button
-          className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-orange-400 hover:opacity-90 transition-all duration-300 text-sm text-dark font-semibold"
+      <div className="flex items-center gap-4">
+        <motion.a
+          href="https://chromewebstore.google.com/detail/code2commit/ehimeboclpaooohhagjlehnjdjccgpid"
+          target="_blank"
+          rel="noopener noreferrer"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-orange-400 hover:opacity-90 transition-all duration-300 text-sm text-dark font-semibold cursor-pointer"
         >
           <BrowserIcon size={15} />
           <span className="hidden sm:inline">Add Extension</span>
-        </button>
+        </motion.a>
         <a
-          href="https://github.com"
+          href="https://github.com/mohitxcodes"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 text-sm text-gray-300 hover:text-white hover:border-white/20"
+          className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 hover:bg-white/10 transition-all duration-300 text-sm text-gray-300 hover:text-white hover:border-white/20 cursor-pointer"
         >
           <GithubIcon size={15} />
           <span className="hidden sm:inline">GitHub</span>
