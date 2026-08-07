@@ -24,7 +24,7 @@ export default function Navbar() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 max-w-7xl mx-auto w-full"
+      className="fixed top-0  left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-4 max-w-7xl mx-auto w-full"
     >
       {/* Glassmorphism backdrop */}
       <div className="absolute inset-0 bg-dark/60 backdrop-blur-xl border-b border-white/5 -z-10" />

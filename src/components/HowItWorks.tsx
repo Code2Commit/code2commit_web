@@ -64,7 +64,7 @@ export default function HowItWorks() {
   const goPrev = useCallback(() => setActiveStep((prev) => Math.max(prev - 1, 0)), []);
 
   return (
-    <section ref={sectionRef} className="relative px-6 md:px-10 py-24 md:py-32 overflow-hidden">
+    <section ref={sectionRef} className="relative px-6 md:px-10 py-24 md:py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Decorative divider */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/5 h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
@@ -74,18 +74,12 @@ export default function HowItWorks() {
           variants={headingVariants}
           initial="hidden"
           animate={inView ? 'show' : 'hidden'}
-          className="text-center mb-20 md:mb-24"
+          className="text-center mb-10 md:mb-8"
         >
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-primary/15 bg-primary/5 text-primary text-xs font-semibold tracking-[0.15em] uppercase mb-6">
             <span className="w-1.5 h-1.5 rounded-full bg-primary" />
             How It Works
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-4 leading-tight">
-            Get started in <span className="bg-gradient-to-r from-primary to-orange-400 bg-clip-text text-transparent">minutes</span>
-          </h2>
-          <p className="text-gray-500 mt-5 max-w-md mx-auto text-base leading-relaxed">
-            Five simple steps to automate your LeetCode workflow.
-          </p>
         </motion.div>
 
         {/* Main content */}
