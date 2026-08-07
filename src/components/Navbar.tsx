@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import logoImage from '../assets/logo/code2commit.png';
 
 const GithubIcon = ({ size = 24, className }: { size?: number; className?: string }) => (
   <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -19,8 +20,8 @@ export default function Navbar() {
       <div className="absolute inset-0 bg-dark/60 backdrop-blur-xl border-b border-white/5 -z-10" />
 
       <div className="flex items-center gap-2.5 cursor-pointer group">
-        <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary to-orange-400 flex items-center justify-center font-bold text-dark text-sm shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow duration-300">
-          C2C
+        <div className="w-9 h-9 rounded-xl flex items-center justify-center overflow-hidden ">
+          <img src={logoImage} alt="Code2Commit Logo" className="w-full h-full object-cover" />
         </div>
         <span className="font-semibold text-lg tracking-tight text-white">
           Code<span className="text-primary">2</span>Commit
