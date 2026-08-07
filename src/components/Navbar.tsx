@@ -8,6 +8,16 @@ const GithubIcon = ({ size = 24, className }: { size?: number; className?: strin
   </svg>
 );
 
+const BrowserIcon = ({ size = 24, className }: { size?: number; className?: string }) => (
+  <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="12" cy="12" r="10" />
+    <circle cx="12" cy="12" r="4" />
+    <line x1="21.17" y1="8" x2="12" y2="8" />
+    <line x1="3.95" y1="6.06" x2="8.54" y2="14" />
+    <line x1="10.88" y1="21.94" x2="15.46" y2="14" />
+  </svg>
+);
+
 export default function Navbar() {
   return (
     <motion.nav
@@ -29,6 +39,12 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-3">
+        <button
+          className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary to-orange-400 hover:opacity-90 transition-all duration-300 text-sm text-dark font-semibold"
+        >
+          <BrowserIcon size={15} />
+          <span className="hidden sm:inline">Add Extension</span>
+        </button>
         <a
           href="https://github.com"
           target="_blank"
