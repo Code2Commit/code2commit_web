@@ -9,7 +9,7 @@ const steps = [
     description:
       'Head to the Chrome Web Store and add Code2Commit to your browser. One click install — no configuration needed.',
     icon: '🧩',
-    image: null as string | null, // Replace with: '/screenshots/step1.png'
+    image: '../src/assets/screenshorts/ss_01.png',
     accent: 'from-violet-500/20 to-indigo-500/20',
   },
   {
@@ -18,7 +18,7 @@ const steps = [
     description:
       'Authorize Code2Commit with your GitHub account. Choose the repository where you want your solutions stored.',
     icon: '🔗',
-    image: null as string | null,
+    image: '../src/assets/screenshorts/ss_02.png',
     accent: 'from-blue-500/20 to-cyan-500/20',
   },
   {
@@ -27,7 +27,7 @@ const steps = [
     description:
       'Write and submit your solution on LeetCode as usual. No changes to your existing workflow at all.',
     icon: '🧠',
-    image: null as string | null,
+    image: '../src/assets/screenshorts/ss_03.png',
     accent: 'from-emerald-500/20 to-teal-500/20',
   },
   {
@@ -36,17 +36,8 @@ const steps = [
     description:
       'Hit the Push button injected right into the LeetCode UI. One click is all it takes to commit your solution.',
     icon: '🚀',
-    image: null as string | null,
+    image: '../src/assets/screenshorts/ss_04.png',
     accent: 'from-orange-500/20 to-amber-500/20',
-  },
-  {
-    number: '05',
-    title: 'See It on GitHub',
-    description:
-      'Your solution gets committed with proper folder structure, file naming, and meaningful commit messages — automatically.',
-    icon: '✅',
-    image: null as string | null,
-    accent: 'from-primary/20 to-yellow-500/20',
   },
 ];
 
@@ -298,7 +289,7 @@ export default function HowItWorks() {
                           <img
                             src={step.image}
                             alt={`Step ${step.number}: ${step.title}`}
-                            className="w-full h-full object-cover relative z-10"
+                            className="w-full h-full object-cover object-right relative z-10"
                           />
                         ) : (
                           /* Placeholder with visual interest */
